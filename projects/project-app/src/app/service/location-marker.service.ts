@@ -12,15 +12,14 @@ export class LocationMarkerService {
 
   // makeCapitalMarkers(map: L.map): void {
     makeCapitalMarkers(map:any): void {
-      console.log("cap",this.capitals);
-      
     this.http.get(this.capitals).subscribe((res: any) => {
       for (const c of res.features) {
         const lon = c.geometry.coordinates[0];
         const lat = c.geometry.coordinates[1];
         const marker = L.marker([lat, lon]);
+        console.log("c",c);
         
-        marker.addTo(map);
+        marker.addTo(map).bindPopup(`${c.properties.name} <br> ${c.properties.population}`); // add marker and popup
       }
     });
    }
