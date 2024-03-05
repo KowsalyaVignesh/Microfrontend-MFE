@@ -22,11 +22,17 @@
             "tsConfig": "projects/employee-app/tsconfig.app.json",
             "assets": [
               "projects/employee-app/src/favicon.ico",
-              "projects/employee-app/src/assets"
+              "projects/employee-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "projects/employee-app/src/styles.css",
-              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/employee-app/webpack.config.js",
@@ -95,10 +101,16 @@
             "tsConfig": "projects/employee-app/tsconfig.spec.json",
             "assets": [
               "projects/employee-app/src/favicon.ico",
-              "projects/employee-app/src/assets"
+              "projects/employee-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
-              "projects/employee-app/src/styles.css"
+              "projects/employee-app/src/styles.css",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           }
@@ -125,10 +137,17 @@
             "assets": [
               "projects/project-app/src/favicon.ico",
               "projects/project-app/src/assets"
+            
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "projects/project-app/src/styles.css",
-              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/project-app/webpack.config.js",
@@ -197,10 +216,16 @@
             "tsConfig": "projects/project-app/tsconfig.spec.json",
             "assets": [
               "projects/project-app/src/favicon.ico",
-              "projects/project-app/src/assets"
+              "projects/project-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
-              "projects/project-app/src/styles.css"
+              "projects/project-app/src/styles.css",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           }
@@ -226,11 +251,17 @@
             "tsConfig": "projects/host-app/tsconfig.app.json",
             "assets": [
               "projects/host-app/src/favicon.ico",
-              "projects/host-app/src/assets"
+              "projects/host-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "projects/host-app/src/styles.css",
-              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/host-app/webpack.config.js",
@@ -299,10 +330,16 @@
             "tsConfig": "projects/host-app/tsconfig.spec.json",
             "assets": [
               "projects/host-app/src/favicon.ico",
-              "projects/host-app/src/assets"
+              "projects/host-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
-              "projects/host-app/src/styles.css"
+              "projects/host-app/src/styles.css",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           }

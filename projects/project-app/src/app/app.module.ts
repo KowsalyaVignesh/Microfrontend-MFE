@@ -34,8 +34,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { Effects } from 'libraries/store/effect';
 import { HttpClientModule } from '@angular/common/http';
 import {MatListModule} from '@angular/material/list';
-
-
+import { MapsComponent } from './components/maps/maps.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LocationMarkerService } from './service/location-marker.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import {MatListModule} from '@angular/material/list';
     AssignProjectComponent,
     ListProjectComponent,
     AssignProjectListComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,6 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,FormsModule,
     MatPaginatorModule,MatSortModule,MatSelectModule,
     MatAutocompleteModule,MatDialogModule,MatMenuModule,
-    // ==>Tech cello requirement
     MatCardModule, 
     MatFormFieldModule,
     MatGridListModule,
@@ -70,8 +71,18 @@ import {MatListModule} from '@angular/material/list';
       maxAge: 25, // Retains last 25 states
       logOnly: !isDevMode, // Restrict extension to log-only mode
     }),
+
+    // CRST requirement
+    // NgxEchartsModule.forRoot({
+    //   echarts: () => import('echarts')
+    // }),
+    // Maps
+    // LeafletModule
+    
+   
+
   ],
-  providers: [],
+  providers: [LocationMarkerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

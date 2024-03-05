@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ProjectDetailsComponent } from './project-details.component';
 import { MatSelectModule } from '@angular/material/select';
 import { AssignProjectComponent } from '../assign-project/assign-project.component';
+import { MapsComponent } from '../maps/maps.component';
 
 
 
@@ -19,6 +20,9 @@ import { AssignProjectComponent } from '../assign-project/assign-project.compone
       },
       {
         path:'assign-project',component:AssignProjectComponent
+      },
+      {
+        path:'map',component:MapsComponent
       }
     ])
   ]
