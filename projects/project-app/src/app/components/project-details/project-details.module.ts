@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ProjectDetailsComponent } from './project-details.component';
-import { MatSelectModule } from '@angular/material/select';
 import { AssignProjectComponent } from '../assign-project/assign-project.component';
 import { MapsComponent } from '../maps/maps.component';
+import { MapsRoutingComponent } from '../maps/maps-routing/maps-routing.component';
 
 
 
@@ -23,6 +22,9 @@ import { MapsComponent } from '../maps/maps.component';
       },
       {
         path:'map',component:MapsComponent
+      },
+      {
+        path:'map-routing',component:MapsRoutingComponent
       }
     ])
   ]

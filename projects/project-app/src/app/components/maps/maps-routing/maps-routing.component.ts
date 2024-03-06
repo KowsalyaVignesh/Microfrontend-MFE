@@ -1,6 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
-import { LocationMarkerService } from '../../service/location-marker.service';
+import { LocationMarkerService } from '../../../service/location-marker.service';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -18,26 +18,27 @@ const iconDefault = L.icon({
 L.Marker.prototype.options.icon = iconDefault;
 
 @Component({
-  selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+  selector: 'app-maps-routing',
+  templateUrl: './maps-routing.component.html',
+  styleUrls: ['./maps-routing.component.css']
 })
-export class MapsComponent implements AfterViewInit {
-
+export class MapsRoutingComponent {
   private map: any;
 
   constructor(private markerService: LocationMarkerService) { }
   ngAfterViewInit(): void {
     this.initMap1()
-    this.markerService.makeCapitalMarkers(this.map);
+    this.markerService.makeCapitalCircleMarkers(this.map);
   }
 
   private initMap1(): void {
+   
     // HTML initilization (set the view)
     this.map = L.map('map', {
       center: [39.8282, -98.5795],
       zoom: 3
     });
+
     // displaying a series of tiles across the page
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
@@ -46,6 +47,12 @@ export class MapsComponent implements AfterViewInit {
     });
 
     tiles.addTo(this.map);
-  }
 
+    // polyline routig
+    var polyline = L.polyline([
+      [47.042418, -122.893077],
+      [46.595805, -112.027031],
+      [44.367966, -100.336378]
+    ]).addTo(this.map);
+  }
 }

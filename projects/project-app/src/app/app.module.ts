@@ -37,6 +37,7 @@ import {MatListModule} from '@angular/material/list';
 import { MapsComponent } from './components/maps/maps.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { LocationMarkerService } from './service/location-marker.service';
+import { MapsRoutingComponent } from './components/maps/maps-routing/maps-routing.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { LocationMarkerService } from './service/location-marker.service';
     AssignProjectComponent,
     ListProjectComponent,
     AssignProjectListComponent,
-    MapsComponent
+    MapsComponent,
+    MapsRoutingComponent
   ],
   imports: [
     BrowserModule,
