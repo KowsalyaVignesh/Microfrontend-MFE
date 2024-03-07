@@ -29,7 +29,7 @@ export class LocationMarkerService {
       for (const c of res.features) {
         const lon = c.geometry.coordinates[0];
         const lat = c.geometry.coordinates[1];
-        const circle = L.circleMarker([lat, lon]);
+        const circle = L.circleMarker([lat, lon],{radius:11});
         
         circle.addTo(map).bindPopup(`${c.properties.name} <br> ${c.properties.population}`); // add marker and popup;
       }

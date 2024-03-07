@@ -1,6 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
-import { LocationMarkerService } from '../../../service/location-marker.service';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -24,15 +23,12 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 export class MapsRoutingComponent {
   private map: any;
-
-  constructor(private markerService: LocationMarkerService) { }
   ngAfterViewInit(): void {
     this.initMap1()
-    this.markerService.makeCapitalCircleMarkers(this.map);
   }
 
   private initMap1(): void {
-   
+
     // HTML initilization (set the view)
     this.map = L.map('map', {
       center: [39.8282, -98.5795],
@@ -48,7 +44,20 @@ export class MapsRoutingComponent {
 
     tiles.addTo(this.map);
 
-    // polyline routig
+    const circle1 = L.circleMarker([47.042418, -122.893077], { radius: 11 });
+    circle1.addTo(this.map).bindPopup(`Olympia <br>51609`); // add marker and popup;
+
+    const circle2 = L.circleMarker([46.595805, -112.027031], {radius:8,weight:8});
+    circle2.addTo(this.map).bindPopup(`Helana <br>31429`); // add marker and popup;
+
+    const circle3 = L.circleMarker([44.367966, -100.336378], {radius:8,weight:8} );
+    circle3.addTo(this.map).bindPopup(`Pierre <br>14004`); // add marker and popup;
+
+    circle1.setStyle({ color: 'red' });
+
+    circle3.setStyle({ color: 'green' });
+
+    // polyline routing
     var polyline = L.polyline([
       [47.042418, -122.893077],
       [46.595805, -112.027031],
