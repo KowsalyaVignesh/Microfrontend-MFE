@@ -86,7 +86,7 @@ Install ngrx effects:
     
 
 Steps to install Leaflet (map) library:
-    - refered document
+    - referred document
     "https://www.digitalocean.com/community/tutorials/angular-angular-and-leaflet"
     "https://www.digitalocean.com/community/tutorials/angular-angular-and-leaflet-marker-service"
     "https://leafletjs.com/"
