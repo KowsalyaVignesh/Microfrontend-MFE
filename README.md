@@ -91,4 +91,4 @@ Steps to install Leaflet (map) library:
     "https://www.digitalocean.com/community/tutorials/angular-angular-and-leaflet-marker-service"
     "https://leafletjs.com/"
 
-    - once u install leaflet open "http://localhost:4300/project-app/map" to see the output
+    - once you install leaflet open "http://localhost:4300/project-app/map" to see the output
